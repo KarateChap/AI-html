@@ -5,6 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"/>
     <script>
       tailwind.config = {
         theme: {
@@ -18,9 +19,42 @@
     </script>
     <title>Document</title>
   </head>
-  <body>
-    <div class>
-      <h1 class="text-2xl font-bold">Sample Text</h1>
+  <body
+    class="w-full h-screen bg-[#C0C0C0] flex justify-center items-center md:p-20"
+  >
+    <div
+      class="max-w-[1240px] bg-white w-full h-full rounded-xl drop-shadow-2xl flex md:flex-row flex-col "
+    >
+      <div class="w-full md:h-full h-[] rounded-bl-xl rounded-tl-xl flex flex-col items-center">
+        <div class="flex-1  w-full md:h-full rounded-tl-xl text-center">
+            <h1 class="font-bold m-10">[Project Name] is an online AI Technology that determines who is the closest to the image. An image will be displayed with valuable information.</h1>
+        </div>
+        <div class="flex-1 md:mb-0 mb-[200px]  w-full h-full items-center justify-center p-10 h-[400px] w-[400px]">
+            <h1 class="font-bold mx-10 my-4 text-center">Drag Image to be Classified:</h1>
+            
+            <div class="drag-area outline-dashed rounded-xl outline-2 flex flex-col justify-center items-center active:outline p-3 [&>*]:max-w-[320px] [&>*]:max-h-[250px]">
+                <div class="text-2xl"><i class="fas fa-cloud-upload-alt"></i></div>
+                <header class="text-slate-500">Drag & Drop to Upload File</header>
+                <span class="text-[15px]">OR</span>
+                <button class="px-[10px] py-[5px] bg-slate-200 rounded-md cursor-pointer text-[15px]">Browse File</button>
+                <input type="file" hidden>
+              </div>
+
+        </div>
+        <div class="flex-1  w-full h-full relative rounded-bl-xl" ><img src="sample.png" class="absolute bottom-0 rounded-bl-xl"/></div>
+      </div w-full h-full>
+
+      <div class="w-full h-full bg-slate-100 rounded-br-xl rounded-tr-xl box-border p-10">
+        <div class="  h-full w-full flex flex-col justify-center items-center gap-4 p-10">
+            <div class="text-left w-full"><h1 class="font-bold">You Uploaded:</h1></div>
+            <div class="w-full">
+                <img src="pyramid.jpeg"/>
+            </div>
+            <h1 class="font-bold">TITLE</h1>
+            <h1 class="text-justify">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quidem, excepturi ad sed, ullam praesentium unde aliquid quaerat doloremque, odit omnis nisi magni voluptate explicabo voluptatibus quod nemo ratione sint nihil?</h1>
+        </div>
+      </div>
     </div>
+    <script src="script.js"></script>
   </body>
 </html>
