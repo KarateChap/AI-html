@@ -11,6 +11,9 @@ const uploadText = document.getElementById("upload-text")
 const translateArabBtn = document.getElementById("translate-arab")
 const translateEngBtn = document.getElementById("translate-eng")
 const description = document.getElementById("description")
+const texts = document.getElementById("texts")
+
+texts.style.visibility = "hidden"
 
 button.onclick = () => {
   input.click() //if user click on the button then the input also clicked
@@ -20,7 +23,7 @@ upload.onclick = () => {
     alert("Please browse an image first")
   } else {
     imageRight.src = fileURL
-    uploadText.innerHTML = "You uploaded:"
+    texts.style.visibility = "visible"
   }
 }
 

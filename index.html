@@ -5,7 +5,10 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <script src="https://cdn.tailwindcss.com"></script>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"/>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"
+    />
     <script>
       tailwind.config = {
         theme: {
@@ -17,62 +20,101 @@
         },
       }
     </script>
-    <title>Nubian Pyramids</title>
+    <title></title>
   </head>
-  <body
-    class="relative w-full h-screen flex justify-center items-center md:p-10"
-  >
-  <div class="max-w-[1400px] bg-[url(nubianbg.png)] bg-cover bg-no-repeat w-full h-full flex justify-center items-center md:p-10 rounded-xl drop-shadow-2xl">
-    <div
-      class="max-w-[1240px] bg-white w-full h-full rounded-xl drop-shadow-2xl flex md:flex-row flex-col"
-    >
-      <div class="w-full md:h-full h-[] rounded-bl-xl rounded-tl-xl flex flex-col items-center relative z-[10]">
-        <div class="flex-1 w-full md:h-full rounded-tl-xl text-center">
-              <h1 class="font-bold tracking-wider m-10 bg-yellow-400 p-4 rounded-xl drop-shadow-xl outline outline-2">[Project Name] is an online AI Technology that determines who is the closest to the image. An image will be displayed with valuable information.</h1>
-        </div>
-        <div class="flex-1 md:mb-0 mb-[200px]  w-full h-full items-center justify-center p-10 h-[400px] w-[400px] rounded-xl  drop-shadow-xl">
-            <h1 class="font-bold mx-10 my-4 text-center">Drag Image to be Classified:</h1>
-            
-            <div class="drag-area outline-dashed rounded-xl outline-2 flex flex-col justify-center items-center active:outline p-3 [&>*]:max-w-[320px] [&>*]:max-h-[250px]">
-                <div class="text-2xl"><i class="fas fa-cloud-upload-alt"></i></div>
-                <header class="text-slate-500">Drag & Drop to Upload File</header>
-                <span class="text-[15px]">OR</span>
-                <input type="file" hidden>
-              </div>
-              <div class="w-full flex justify-center mt-5 gap-3">
-                <button id="btn" class="px-[10px] py-[5px] bg-slate-200 hover:bg-slate-300 rounded-md active:scale-[95%] cursor-pointer text-[15px] cursor-pointer">Browse File</button>
-                <button id="upload" class="px-[10px] py-[5px] bg-slate-200 hover:bg-slate-300 rounded-md active:scale-[95%] cursor-pointer text-[15px] cursor-pointer">Upload and Classify</button>
-              </div>
-        </div>
-        <div class="flex-1 z-[-10] w-full h-full  rounded-bl-xl" ></div>
-          <img src="nubianpyramid.png" class="absolute bottom-[-6px] md:left-0 rounded-bl-xl w-[300px]"/>
-      </div w-full h-full>
+  <body>
+    <div class="flex md:py-10 md:px-[160px] w-full flex-col gap-5">
+      <div
+        class="w-full h-[170vh] md:h-full bg-white drop-shadow-2xl rounded-xl md:py-14 md:px-20"
+      >
+        <div class="flex w-full h-full flex-col">
+          <div class="w-full h-20vh md:h-[15vh] flex flex-col md:flex-row mt-16 md:mt-0">
+            <div class="flex-1">
+              <h1 class="font-bold tracking-wider mx-10 my-2 p-4">
+                [Project Name] is an online AI Technology that determines who is
+                the closest to the image. An image will be displayed with
+                valuable information.
+              </h1>
+            </div>
+            <div class="flex-1 md:ml-[-110px]">
+              <img src="sample.png" class="rounded-bl-xl" />
+            </div>
+          </div>
 
-      <div class="w-full h-full bg-slate-100 rounded-br-xl rounded-tr-xl box-border p-10">
-        <div class="  h-full w-full flex flex-col justify-center items-center gap-4 p-10">
-            <div class="text-left w-full"><h1 class="font-bold tracking-wider" id="upload-text"></h1></div>
-            <div class="w-full">
-                <img src="no-image.png" id="img-right" class="outline outline-2 drop-shadow-xl rounded-xl"/>
+          <div
+            class="w-full md:h-[30vh] flex flex-col justify-center items-center mt-10"
+          >
+            <div
+              class="drag-area md:w-[350px] outline-dashed rounded-xl outline-2 flex flex-col justify-center items-center active:outline p-3 [&>*]:max-w-[200px] [&>*]:max-h-[100px]"
+            >
+              <div class="text-2xl">
+                <i class="fas fa-cloud-upload-alt"></i>
+              </div>
+              <header class="text-slate-500">Drag & Drop to Upload File</header>
+              <span class="text-[15px]">OR</span>
+              <input type="file" hidden />
             </div>
-            <h1 class="font-bold">NUBIAN</h1>
-            <h1 class="text-justify" id="description">The name Nubia is derived from the Noba people: nomads who settled the area in fourth-century AD following the collapse of the kingdom of Meroë. The Noba spoke a Nilo-Saharan language that is ancestral to Old Nubian, which was mostly used in religious texts dating from the eighth and fifteenth centuries.</h1>
-            <div class="flex gap-3">
-              <div id="google_translate_element"></div>
-              <!-- <button class="py-2 px-3 bg-slate-200 hover:bg-slate-300 rounded-xl" id="translate-arab">Translate to Arabic</button>
-              <button class="py-2 px-3 bg-slate-200 hover:bg-slate-300 rounded-xl" id="translate-eng">Translate to English</button> -->
+            <div class="w-full flex justify-center mt-5 gap-3">
+              <button
+                id="btn"
+                class="px-[10px] py-[5px] bg-slate-200 hover:bg-slate-300 rounded-md active:scale-[95%] cursor-pointer text-[15px] cursor-pointer"
+              >
+                Browse File
+              </button>
+              <button
+                id="upload"
+                class="px-[10px] py-[5px] bg-slate-200 hover:bg-slate-300 rounded-md active:scale-[95%] cursor-pointer text-[15px] cursor-pointer"
+              >
+                Upload and Classify
+              </button>
             </div>
+          </div>
+
+          <div class="w-full h-[70vh] md:h-[35vh] flex flex-col md:flex-row items-center gap-10 md:gap-14 mt-14 md:mt-0 bm-10 md:mb-0">
+            <div class="flex-1 flex md:justify-end justify-center ">
+              <div class="w-[80%]">
+                <img
+                  src="no-image.png"
+                  id="img-right"
+                  class="drop-shadow-xl rounded-md w-[100%] h-[320px]"
+                />
+              </div>
+            </div>
+            <div class="flex-1 flex flex-col md:px-2 px-10" id="texts">
+              <h1 class="font-bold">TITLE</h1>
+              <h1 class="text-justify" id="description">
+                Lorem ipsum dolor, sit amet consectetur adipisicing elit.
+                Eligendi veritatis voluptatibus, repellat corporis nemo velit at
+                architecto non aliquam adipisci, quae fuga nesciunt laudantium
+                nobis magnam in nostrum tempore. Quod!
+              </h1>
+              <div class="flex mt-5">
+                <div id="google_translate_element"></div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="flex flex-col md:flex-row gap-5 md:gap-0 w-full bg-gray-600 rounded-md text-white p-10">
+        <div>
+          <h1 class="font-bold">ABOUT</h1>
+          <h1>Lorem ipsum dolor sit amet consectetur adipisicing elit. Facere commodi quia minus minima aliquam rerum, deleniti ducimus. Similique modi quisquam laboriosam? Rem ullam, minima quasi nostrum deleniti eaque. Libero, ipsa?</h1>
+        </div>
+        <div>
+          <h1 class="font-bold">FAQ</h1>
+          <h1>Lorem ipsum dolor sit amet consectetur adipisicing elit. Facere commodi quia minus minima aliquam rerum, deleniti ducimus. Similique modi quisquam laboriosam? Rem ullam, minima quasi nostrum deleniti eaque. Libero, ipsa?</h1>
         </div>
       </div>
     </div>
-  </div>
-    
+
     <script src="script.js"></script>
     <script src="https://translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
     <script>
-      function googleTranslateElementInit(){
+      function googleTranslateElementInit() {
         new google.translate.TranslateElement(
-          {pageLanguage: 'en'},
-          'google_translate_element'
+          { pageLanguage: "en" },
+          "google_translate_element"
         )
       }
     </script>
