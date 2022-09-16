@@ -8,6 +8,9 @@ const button = document.getElementById("btn")
 const imageRight = document.getElementById("img-right")
 const upload = document.getElementById("upload")
 const uploadText = document.getElementById("upload-text")
+const translateArabBtn = document.getElementById("translate-arab")
+const translateEngBtn = document.getElementById("translate-eng")
+const description = document.getElementById("description")
 
 button.onclick = () => {
   input.click() //if user click on the button then the input also clicked
@@ -66,3 +69,28 @@ function showFile() {
     dragText.textContent = "Drag & Drop to Upload File"
   }
 }
+
+translateArabBtn.onclick = () => {
+  let translatedData = ""
+
+  let apiUrl = `https://api.mymemory.translated.net/get?q=${description.innerHTML}&langpair=en|ar-ae`
+  fetch(apiUrl)
+    .then((res) => res.json())
+    .then((data) => {
+      translatedData = data.responseData.translatedText
+      description.innerHTML = translatedData
+    })
+}
+
+translateEngBtn.onclick = () => {
+  let translatedData = ""
+
+  let apiUrl = `https://api.mymemory.translated.net/get?q=${description.innerHTML}&langpair=ar-ae|en`
+  fetch(apiUrl)
+    .then((res) => res.json())
+    .then((data) => {
+      translatedData = data.responseData.translatedText
+      description.innerHTML = translatedData
+    })
+}
+
