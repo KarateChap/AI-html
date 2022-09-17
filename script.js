@@ -12,7 +12,6 @@ const translateArabBtn = document.getElementById("translate-arab")
 const translateEngBtn = document.getElementById("translate-eng")
 const description = document.getElementById("description")
 const texts = document.getElementById("texts")
-const textContainer = document.getElementById("text-container")
 
 texts.style.visibility = "hidden"
 
@@ -25,7 +24,6 @@ upload.onclick = () => {
   } else {
     imageRight.src = fileURL
     texts.style.visibility = "visible"
-    textContainer.style.height = "75vh"
   }
 }
 
