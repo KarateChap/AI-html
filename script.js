@@ -13,7 +13,7 @@ const translateEngBtn = document.getElementById("translate-eng")
 const description = document.getElementById("description")
 const texts = document.getElementById("texts")
 
-texts.style.visibility = "hidden"
+texts.style.display = "none"
 
 button.onclick = () => {
   input.click() //if user click on the button then the input also clicked
@@ -23,7 +23,7 @@ upload.onclick = () => {
     alert("Please browse an image first")
   } else {
     imageRight.src = fileURL
-    texts.style.visibility = "visible"
+    texts.style.display = "inline"
   }
 }
 
