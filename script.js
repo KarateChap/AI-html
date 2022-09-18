@@ -23,6 +23,7 @@ upload.onclick = () => {
     alert("Please browse an image first")
   } else {
     imageRight.src = fileURL
+    imageRight.style.display = "inline"
     texts.style.display = "inline"
   }
 }
